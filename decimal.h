@@ -11,10 +11,11 @@
 typedef struct 
 {
   unsigned bits[4];
-} decimal;
+} Decimal;
 
 
-int getBit(decimal num, int index);
-void setBit(decimal *num, int index, int value);
+int getBit(Decimal num, int index);
+void setBit(Decimal *num, int index, int value);
+void setSign(Decimal *num, int sign);
 
 #endif 
