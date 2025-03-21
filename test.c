@@ -5,7 +5,7 @@ int main() {
 
   setBit(&d, 5, 1);
   printf("Later: 1 => give: %d\n", getBit(d, 5));
-  
+
   setBit(&d, 5, 1);
   printf("%d", getBit(d, 5));
 

@@ -8,7 +8,7 @@
  */
 int getBit(Decimal num, int index) {
   int res = 0;
-  if(index / 32 < 4) {
+  if (index / 32 < 4) {
     unsigned int mask = 1u << (index % 32);
     res = num.bits[index / 32] & mask;
   }
@@ -20,11 +20,11 @@ int getBit(Decimal num, int index) {
  * @param index Положение бита
  * @param value Значение бита
  */
-void setBit(Decimal *num, int index, int value){
+void setBit(Decimal *num, int index, int value) {
   unsigned int mask = 1u << (index % 32);
-  if(index / 32 < 4 && value) {
+  if (index / 32 < 4 && value) {
     num->bits[index / 32] |= mask;
-  } else if(index / 32 < 4 && !value) {
+  } else if (index / 32 < 4 && !value) {
     num->bits[index / 32] &= ~mask;
   }
 }

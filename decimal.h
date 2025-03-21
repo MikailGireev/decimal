@@ -1,9 +1,9 @@
 #ifndef DECIMAL_H
 #define DECIMAL_H
 
+#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 
 #define TRUE 1
 #define FALSE 0
@@ -16,22 +16,21 @@ typedef enum {
   ADDCODE = 4,
 } valueTypeT;
 
-typedef struct 
-{
+typedef struct {
   unsigned bits[4];
   valueTypeT type;
 } Decimal;
-
 
 int getBit(Decimal num, int index);
 void setBit(Decimal *num, int index, int value);
 void setSign(Decimal *num, int sign);
 int getSign(const Decimal *num);
-int getScale(const Decimal *num); 
+int getScale(const Decimal *num);
 void setScale(Decimal *num, int scale);
 int lastBit(Decimal num);
 void shiftLeft(Decimal *num, int shift);
+void convertToAddcode(Decimal *num);
 
 Decimal bitAddition(Decimal *var1, Decimal *var2);
 
-#endif 
+#endif
