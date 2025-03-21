@@ -32,4 +32,6 @@ void setScale(Decimal *num, int scale);
 int lastBit(Decimal num);
 void shiftLeft(Decimal *num, int shift);
 
+Decimal bitAddition(Decimal *var1, Decimal *var2);
+
 #endif 
