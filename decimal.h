@@ -27,6 +27,9 @@ int getBit(Decimal num, int index);
 void setBit(Decimal *num, int index, int value);
 void setSign(Decimal *num, int sign);
 int getSign(const Decimal *num);
-int getScale(const Decimal *num);
+int getScale(const Decimal *num); 
+void setScale(Decimal *num, int scale);
+int lastBit(Decimal num);
+void shiftLeft(Decimal *num, int shift);
 
 #endif 
