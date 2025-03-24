@@ -28,3 +28,11 @@ void setBit(Decimal *num, int index, int value) {
     num->bits[index / 32] &= ~mask;
   }
 }
+
+/**
+ * @brief Очистка битов
+ * @param num Указатель на число децимал
+ */
+void clearBits(Decimal *num) {
+  memset(num->bits, 0, sizeof(num->bits));
+}
