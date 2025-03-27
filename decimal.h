@@ -22,6 +22,7 @@ typedef struct {
   valueTypeT type;
 } Decimal;
 
+void initStruct(Decimal *num);
 int getBit(Decimal num, int index);
 void bitsCopy(Decimal *src, Decimal *dest);
 void setBit(Decimal *num, int index, int value);
