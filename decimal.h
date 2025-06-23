@@ -39,6 +39,9 @@ int scaleEqualize(Decimal *num1, Decimal *num2);
 void decimal_negative(Decimal *d);
 void decimal_substact(Decimal *result, const Decimal *num1, const Decimal *num2);
 int decimal_compare(const Decimal *num1, const Decimal *num2);
+Decimal decimal_multiply(const Decimal *num1, const Decimal *num2);
+
+Decimal from_int(int num);
 
 Decimal bitAddition(Decimal *var1, Decimal *var2);
 

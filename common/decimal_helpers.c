@@ -58,4 +58,42 @@ void decimal_negative(Decimal *d) {
 int decimal_compare(const Decimal *num1, const Decimal *num2) {
   Decimal left = *num1;
   Decimal right = *num2;
+
+  scaleEqualize(&left, &right);
+  
+  int sign_a = getSign(num1);
+  int sign_b = getSign(num2);
+
+  if(sign_a != sign_b) {
+    return sign_a ? -1 : 1;
+  }
+
+  for(int i = 2; i >= 0; i--) {
+    if(left.bits[i] > right.bits[i]) {
+      return sign_a ? -1 : 1;
+    } 
+    if(left.bits[i] < right.bits[i]) {
+      return sign_a ? 1 : -1;
+    }
+  }
+
+  return 0;
+}
+
+/**
+ * @brief Преобразование целого чисоа в число децимал
+ * @param num Целое число
+ */
+Decimal from_int(int num) {
+  Decimal result;
+  initStruct(&result);
+
+  if (num < 0) {
+    setSign(&result, 1);
+    num = -num;
+  }
+
+  result.bits[0] = (unsigned)num;
+  setScale(&result, 0);
+  return result;
 }
