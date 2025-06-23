@@ -40,6 +40,8 @@ void decimal_negative(Decimal *d);
 void decimal_substact(Decimal *result, const Decimal *num1, const Decimal *num2);
 int decimal_compare(const Decimal *num1, const Decimal *num2);
 Decimal decimal_multiply(const Decimal *num1, const Decimal *num2);
+Decimal decimal_divide(const Decimal *num1, const Decimal *num2);
+Decimal decimal_substact_internal(const Decimal* a, const Decimal* b);
 
 Decimal from_int(int num);
 
