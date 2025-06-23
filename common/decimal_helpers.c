@@ -41,3 +41,21 @@ int is_inf(Decimal *dec1, Decimal *dec2) {
 
   return whoIsInf;
 }
+
+/**
+ * @brief Меняет знак числа децимал
+ * @param d Число децимал
+ */
+void decimal_negative(Decimal *d) {
+  d->bits[3] ^= (1u << 31);
+}
+
+/**
+ * @brief Сравнение чисел децимал
+ * @param num1 Первое число децимал
+ * @param num2 Второе число децимал
+ */
+int decimal_compare(const Decimal *num1, const Decimal *num2) {
+  Decimal left = *num1;
+  Decimal right = *num2;
+}

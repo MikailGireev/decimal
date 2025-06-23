@@ -107,7 +107,7 @@ int scaleEqualize(Decimal *num1, Decimal *num2) {
       Decimal remainder;
       Decimal ten = {{10,0,0,0}, NORMAL_VALUE};
 
-      Decimal tmpDiv
+      Decimal tmpDiv;
     }
    }
 }

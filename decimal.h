@@ -36,6 +36,9 @@ int zeroCheck(Decimal num1, Decimal num2);
 void shiftLeft(Decimal *num, int shift);
 void converToAddcode(Decimal *num);
 int scaleEqualize(Decimal *num1, Decimal *num2);
+void decimal_negative(Decimal *d);
+void decimal_substact(Decimal *result, const Decimal *num1, const Decimal *num2);
+int decimal_compare(const Decimal *num1, const Decimal *num2);
 
 Decimal bitAddition(Decimal *var1, Decimal *var2);
 
